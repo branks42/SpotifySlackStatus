@@ -7,7 +7,6 @@ from update_status import update_status
 # Spotify App credentials
 CLIENT_ID = ''
 CLIENT_SECRET = ''
-
 # Slack Credentials
 slack_token = ''
 # The second blank is filled in during the function call
@@ -27,6 +26,6 @@ token = util.prompt_for_user_token(
 spotify = spotipy.Spotify(auth=token)
 
 while True:
-    sleep_time, spotify = update_status(spotify, slack_url, token)
+    sleep_time, spotify = update_status(spotify, slack_url)
     time.sleep(sleep_time)
 
