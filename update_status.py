@@ -30,7 +30,7 @@ def update_status(spotify, slack_url, token):
     song_info = "{} - {}".format(current_song['item']['artists'][0]['name'],
                                  current_song['item']['name'])
 
-    print("Changing song to {} \n".format(song_info))
+    print("Changing Slack Status to {} \n".format(song_info))
 
     # Change the status
     sleep_time = (current_song['item']['duration_ms'] - current_song['progress_ms']) / 1000
