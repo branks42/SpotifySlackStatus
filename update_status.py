@@ -1,9 +1,10 @@
 import requests
 import json
 import spotipy
+import spotipy.util as util
 
 
-def update_status(spotify, slack_url, token):
+def update_status(spotify, slack_url):
     """
     Update the requesting user's Slack status.
 
@@ -13,8 +14,6 @@ def update_status(spotify, slack_url, token):
         Spotipy class
     slack_url : str
         Url to post the new status
-    token : str
-        Spotify token
 
     Returns
     -------
@@ -24,6 +23,13 @@ def update_status(spotify, slack_url, token):
         current_song = spotify.current_playback()
     except spotipy.exceptions.SpotifyException:
         # Spotify Authentication error, authorization resets after an hour
+        token = util.prompt_for_user_token(
+            'YOU_SPOTIFY_USERNAME_HERE',
+            'user-read-playback-state',
+            CLIENT_ID,
+            CLIENT_SECRET,
+            'http://localhost:9090')
+        
         spotify = spotipy.Spotify(auth=token)
         current_song = spotify.current_playback()
 
