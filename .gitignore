@@ -1,0 +1,11 @@
+.vscode
+.python-version
+*.pyc
+
+ # Pycharm/VSCode configuration
+.idea/
+.vscode
+
+# Virtualenv
+slackify/
+
