@@ -4,7 +4,7 @@ import spotipy
 import spotipy.util as util
 
 
-def update_status(spotify, slack_url, client_id, client_secet):
+def update_status(spotify, slack_url, client_id, client_secret):
     """
     Update the requesting user's Slack status.
 
@@ -27,7 +27,7 @@ def update_status(spotify, slack_url, client_id, client_secet):
             'YOUR_SPOTIFY_USERNAME_HERE',
             'user-read-playback-state',
             client_id,
-            client_secet,
+            client_secret,
             'http://localhost:9090')
         spotify = spotipy.Spotify(auth=token)
         current_song = spotify.current_playback()
