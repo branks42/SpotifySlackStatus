@@ -15,7 +15,7 @@ Step 4:
 Once you have created a new app, click on settings and make sure your redirect uri is set to `http://localhost:9090`
 
 Step 5:
-Depracated: Navigate here: `https://api.slack.com/legacy/custom-integrations/legacy-tokens` and grab a Legacy Slack token.
+Depracated: Navigate here: https://api.slack.com/legacy/custom-integrations/legacy-tokens and grab a Legacy Slack token.
 
 Step 6:
 Plug the information provided to you from `Slack` and `Spotify` into the blanks in the code.
