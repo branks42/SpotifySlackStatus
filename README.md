@@ -21,4 +21,4 @@ Step 6:
 Plug the information provided to you from `Slack` and `Spotify` into the blanks in the code.
 
 Step 7:
-`python spotify_sllack_status.py`
+`python spotify_slack_status.py`
